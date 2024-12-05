@@ -86,7 +86,7 @@ const ImageUpload = () => {
                 </button>
               </h3>
               {prediction < 0.5 ? (
-                <span className="text-green-500"> (Real)</span>
+                <span className="text-green-500 text-xl font-semibold flex justify-center items-center">Your image is not capping.</span>
               ) : (
                 <div className="flex justify-center items-center text-red-500 text-xl font-semibold">
                   Your image is a cap.

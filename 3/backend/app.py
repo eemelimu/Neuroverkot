@@ -13,8 +13,8 @@ model = load_model('../keras/convnet_from_scratch.keras')
 @app.route('/predict', methods=['POST'])
 def predict():
     file = request.files['image']
-    image = Image.open(io.BytesIO(file.read())).resize((256,256))
-    image_array = np.array(image) / 255.0
+    image = Image.open(io.BytesIO(file.read())).resize(())
+    image_array = np.array(image)
     image_array = np.expand_dims(image_array, axis=0)
     
     prediction = model.predict(image_array)
